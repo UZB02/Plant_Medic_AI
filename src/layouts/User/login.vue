@@ -1,5 +1,3 @@
-
-import { pushScopeId } from 'vue';
 <template>
     <header>
         <div class="conatainer">
