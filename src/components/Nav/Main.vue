@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600"
+    class="bg-white dark:bg-gray-900 sticky w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 "
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -11,21 +11,21 @@
       >
         <img
           src="https://i.pinimg.com/originals/20/d8/e4/20d8e442c968b95349039e021e3e51c5.png"
-          class="h-8"
+          class="h-10"
           alt="Plant medic AI"
         />
-        <span
+        <h1
           class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-          >Flowbite</span
+          ><span class="flex flex-col"><span>Plant</span> <span>Medic <span class="text-lime-500">AI</span></span></span></h1
         >
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <button
           type="button"
           @click="logout"
-          class="text-white flex items-center justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800"
+          class="text-white flex items-center justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800"
         >
-          Log Out
+          Sign In / Sign Up
           <svg
             class="w-5 h-5 text-white dark:text-white"
             aria-hidden="true"
