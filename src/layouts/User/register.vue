@@ -47,7 +47,7 @@
 <script setup>
 import { ref } from "vue";
 import router from "@/router";
-import Nav from "../../components/Nav/UserNav.vue"
+import Nav from "../../components/Nav/Main.vue"
 
 const email = ref("");
 const password = ref("");
