@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-white dark:bg-gray-900 sticky w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 "
+    class="bg-white dark:bg-gray-900 sticky w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 "
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -19,29 +19,7 @@
           ><span class="flex flex-col"><span>Plant</span> <span>Medic <span class="text-lime-500">AI</span></span></span></h1
         >
       </a>
-      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button
-          type="button"
-          @click="logout"
-          class="text-white flex items-center justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800"
-        >
-          Sign In / Sign Up
-          <svg
-            class="w-5 h-5 text-white dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 16"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
-            />
-          </svg>
-        </button>
+      <div class="flex md:hidden md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button
       @click="toggleMenu"
       data-collapse-toggle="navbar-sticky"
@@ -74,7 +52,7 @@
       id="navbar-sticky"
     >
       <ul
-        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        class="flex flex-col items-center justify-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
       >
         <li>
           <a
@@ -104,6 +82,30 @@
             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lime-700 md:p-0 md:dark:hover:text-lime-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
             >Contact</a
           >
+        </li>
+        <li>
+         <button
+          type="button"
+          @click="logout"
+          class="text-white flex items-center justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800"
+        >
+          Sign In / Sign Up
+          <svg
+            class="w-5 h-5 text-white dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 16"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
+            />
+          </svg>
+        </button>
         </li>
       </ul>
     </div>

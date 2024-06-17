@@ -61,7 +61,7 @@ function login() {
   }
 }
 </script>
-<style>
+<style scoped>
 section {
   background-image: url("https://bogatyr.club/uploads/posts/2023-03/1679143074_bogatyr-club-p-fon-kriptovalyuta-foni-instagram-55.png");
   background-repeat: no-repeat;
