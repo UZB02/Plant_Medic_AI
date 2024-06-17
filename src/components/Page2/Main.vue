@@ -51,7 +51,7 @@
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
               <img
-                src="../../img/ii-v-selskom-hozyaistve1.jpg"
+                src="../../img/1-rasm.png"
                 class="absolute block h-full object-cover w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
@@ -67,7 +67,7 @@
             <!-- Item 5 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
               <img
-                src="../../img/ii-v-selskom-hozyaistve1.jpg"
+                src="../../img/roboplant.jpg"
                 class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
