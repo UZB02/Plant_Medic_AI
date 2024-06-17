@@ -16,7 +16,7 @@
             </p>
            <div class="md:w-4/5 w-full flex items-center justify-start">
              <button
-              class="text-white flex items-center w-1/3 mt-3 justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800"
+              class="text-white flex items-center w-full md:w-1/3 mt-3 justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800"
             >
               Learn More
             </button>
@@ -59,7 +59,7 @@
             <!-- Item 4 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
               <img
-                src="../../img/ii-v-selskom-hozyaistve1.jpg"
+                src="../../img/inovatsia.jpg"
                 class="absolute block h-full object-cover w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
