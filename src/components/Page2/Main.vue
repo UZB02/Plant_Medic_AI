@@ -3,22 +3,24 @@
     <div class="container px-3 grid grid-cols-1 md:grid-cols-2 gap-3">
       <div class="left flex items-center justify-center">
         <div class="card flex items-center justify-center">
-          <div class="content flex flex-col gap-3">
+          <div class="content flex flex-col items-center justify-center gap-3">
             <h1 class="title font-bold text-6xl lg:text-8xl text-center">
-              Plant Medic <span class="text-lime-500">AI</span>
+              About Us
             </h1>
-            <p class="copy">
+            <p class="copy md:w-4/5 w-full">
               A simple and easy-to-use AI-based image classification system for
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
               alias ipsum quam quibusdam, voluptatum suscipit, excepturi ut nemo
               rerum cupiditate maxime eveniet aperiam omnis optio blanditiis cum
               sapiente culpa. Fuga?
             </p>
-            <button
-              class="text-white flex items-center justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800"
+           <div class="md:w-4/5 w-full flex items-center justify-start">
+             <button
+              class="text-white flex items-center w-1/3 mt-3 justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800"
             >
               Learn More
             </button>
+           </div>
           </div>
         </div>
       </div>
