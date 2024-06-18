@@ -1,8 +1,8 @@
 <template>
   <Nav></Nav>
-  <section class="h-[80vh] p-4">
+  <section class="h-[80vh] flex items-center justify-center p-4 pt-14 relative">
     <div
-      class="container h-full flex items-center justify-center flex-col md:flex-row"
+      class="container pt-44 pb-4 flex items-center justify-center flex-col md:flex-row"
     >
       <div class="flex flex-col md:flex-row items-center justify-center">
         <h1
@@ -18,7 +18,7 @@
         />
       </div>
       <div
-        :class="request ? 'card flex items-center flex-col md:flex-row gap-3 p-4 md:w-2/3 w-full h-full border border-separate border-dotted' : 'card flex items-center flex-col p-4 md:w-2/3 w-full h-full border border-separate border-dotted'"
+        :class="request ? 'card flex items-center flex-col  lg:flex-row gap-3 p-4 md:w-2/3 w-full h-full border border-separate border-dotted' : 'card flex items-center flex-col p-4 md:w-2/3 w-full h-full border border-separate border-dotted'"
       >
         <form
           action=""
@@ -33,7 +33,7 @@
         >
           Hi! How Can I Help You?
         </h1>
-        <h1
+        <!-- <h1
           :class="
             file
               ? 'flex items-center justify-center flex-col text-center'
@@ -41,7 +41,7 @@
           "
         >
           Are you shoure to upload an image?
-        </h1>
+        </h1> -->
           <span
             class="flex items-center justify-center flex-col text-center"
             :class="
@@ -80,7 +80,7 @@
           >
             <img
               :src="file"
-              class="w-auto h-full md:object-cover md:h-4/5"
+              class="w-auto h-[50vh] md:object-cover md:h-[50vh]"
               alt=""
             />
           <span :class="request ? 'hidden' : 'flex items-center justify-center w-full gap-1'">
@@ -95,7 +95,7 @@
           </span>
           </span>
         </form>
-        <textarea name="" id="" cols="30" :class="request ? 'w-full h-full outline-none border-none' : 'hidden'" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat possimus quidem perspiciatis unde? Praesentium, cumque enim incidunt delectus cupiditate quae eligendi perferendis beatae neque ducimus adipisci non sapiente officia eos voluptatibus nesciunt. Itaque vero perferendis enim saepe. Repudiandae commodi saepe libero quos perspiciatis in porro ipsa inventore aliquam magni illo optio sequi totam aspernatur sapiente earum error, aliquid deleniti blanditiis officia! Architecto fuga provident quasi dignissimos quia soluta ad illo quas officiis, vitae deserunt repellendus natus. Non animi aliquid sint optio ad consequatur natus placeat harum omnis qui quos doloremque maiores modi itaque, sit molestiae quis dolore quo dignissimos atque suscipit. Reiciendis aliquid vitae, accusantium sunt cum quibusdam sapiente consectetur tenetur magnam rerum natus laboriosam ipsam nihil qui et reprehenderit placeat omnis asperiores magni praesentium exercitationem sit officia. Illum quaerat, quidem eum recusandae minus ratione facilis incidunt explicabo quis quisquam dicta eaque ut quod alias similique delectus tenetur vel, ipsam vitae tempore aliquid totam dolor atque expedita! Pariatur consequuntur iste excepturi reprehenderit sunt hic quam aperiam facilis minima, repellat possimus debitis eos eum provident veniam? Ut tenetur aperiam eos repudiandae ullam eius quasi, mollitia dolor officia nam odit a optio rerum delectus soluta error nostrum earum? Earum, ab id.</textarea>
+        <textarea name="" id="" cols="30" :class="request ? 'w-full h-[35vh] outline-none border-none' : 'hidden'" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat possimus quidem perspiciatis unde? Praesentium, cumque enim incidunt delectus cupiditate quae eligendi perferendis beatae neque ducimus adipisci non sapiente officia eos voluptatibus nesciunt. Itaque vero perferendis enim saepe. Repudiandae commodi saepe libero quos perspiciatis in porro ipsa inventore aliquam magni illo optio sequi totam aspernatur sapiente earum error, aliquid deleniti blanditiis officia! Architecto fuga provident quasi dignissimos quia soluta ad illo quas officiis, vitae deserunt repellendus natus. Non animi aliquid sint optio ad consequatur natus placeat harum omnis qui quos doloremque maiores modi itaque, sit molestiae quis dolore quo dignissimos atque suscipit. Reiciendis aliquid vitae, accusantium sunt cum quibusdam sapiente consectetur tenetur magnam rerum natus laboriosam ipsam nihil qui et reprehenderit placeat omnis asperiores magni praesentium exercitationem sit officia. Illum quaerat, quidem eum recusandae minus ratione facilis incidunt explicabo quis quisquam dicta eaque ut quod alias similique delectus tenetur vel, ipsam vitae tempore aliquid totam dolor atque expedita! Pariatur consequuntur iste excepturi reprehenderit sunt hic quam aperiam facilis minima, repellat possimus debitis eos eum provident veniam? Ut tenetur aperiam eos repudiandae ullam eius quasi, mollitia dolor officia nam odit a optio rerum delectus soluta error nostrum earum? Earum, ab id.</textarea>
       </div>
     </div>
   </section>
