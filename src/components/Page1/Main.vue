@@ -15,6 +15,7 @@
               sapiente culpa. Fuga?
             </p>
             <button
+            @click="router.push('/ai')"
               class="text-white flex items-center  md:w-1/3 justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 mt-3 dark:focus:ring-lime-800"
             >
               Get Started
@@ -26,6 +27,8 @@
   </section>
 </template>
 <script setup>
+import router from '@/router';
+
 </script>
 <style scoped>
 section{

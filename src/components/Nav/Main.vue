@@ -11,11 +11,11 @@
       >
         <img
           src="https://i.pinimg.com/originals/20/d8/e4/20d8e442c968b95349039e021e3e51c5.png"
-          class="h-10"
+          class="md:h-10 h-8"
           alt="Plant medic AI"
         />
         <h1
-          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          class="self-center :md:text-2xl text-xl font-semibold whitespace-nowrap dark:text-white"
           ><span class="flex flex-col"><span>Plant</span> <span>Medic <span class="text-lime-500">AI</span></span></span></h1
         >
       </a>
