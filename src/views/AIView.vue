@@ -2,7 +2,7 @@
   <Nav></Nav>
   <section class="h-[80vh] flex items-center justify-center p-4 pt-14 relative">
     <div
-      class="container pt-7 pb-4 flex items-center justify-center flex-col md:flex-row"
+      class="container pt-44 pb-4 flex items-center justify-center flex-col md:flex-row"
     >
       <div class="flex flex-col md:flex-row items-center justify-center">
         <h1
