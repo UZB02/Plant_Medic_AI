@@ -31,6 +31,7 @@
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-lime-500 focus:border-lime-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-500 dark:focus:border-lime-500"
             placeholder="••••••••"
             required
+            autocomplete=""
           />
         </div>
         <button
@@ -40,7 +41,11 @@
         >
           Submit
         </button>
+        <span class="flex w-full justify-end text-sm text-gray-500 dark:text-gray-400">
+              <p class="text-center text-sm text-gray-500 dark:text-gray-400">Not registered? <span @click="router.push('/register')" class="font-semibold text-lime-500 hover:underline dark:text-lime-400 cursor-pointer">Create account</span></p>
+        </span>
       </form>
+  
     </div>
   </section>
 </template>
@@ -48,16 +53,23 @@
 import { ref } from "vue";
 import router from "@/router";
 import Nav from "../../components/Nav/Main.vue"
+import Swal from 'sweetalert2';
 
 const email = ref("");
 const password = ref("");
 
 function login() {
-  if (email.value == "admin@gmail.com" && password.value == "11111111") {
+  if (email.value == localStorage.getItem("email") && password.value == localStorage.getItem("password")) {
     localStorage.setItem("token", "12345");
     router.push("/");
   } else {
-    alert("login failed");
+     Swal.fire({
+  position: "top-center",
+  icon: "error",
+  title: "Please enter correct email and password",
+  showConfirmButton: false,
+  timer: 1500
+});
   }
 }
 </script>
