@@ -2,10 +2,11 @@
   <Nav></Nav>
   <section class="h-[80vh] flex items-center justify-center p-4 pt-14 relative">
     <div
-      class="container pt-11 pb-4 flex items-center justify-center flex-col md:flex-row"
+      class="container pt-11 pb-4 flex items-center gap-3 justify-center flex-col md:flex-row"
     >
-      <div class="flex flex-col md:flex-row items-center justify-center">
-        <h1
+      <div class="flex flex-col items-center justify-center">
+    <span class="flex flex-col md:flex-row items-center justify-center">
+          <h1
           class="md:text-4xl text-xl font-bold text-center uppercase font-sans"
         >
           Plant Medic <span class="text-lime-500">AI</span>
@@ -16,13 +17,17 @@
           src="https://cdn.dribbble.com/users/690291/screenshots/3507754/untitled-1.gif"
           alt=""
         />
+    </span>
+    <span class="w-full">
+      <Chat></Chat>
+    </span>
       </div>
       <div
-        :class="request ? 'card flex items-center flex-col  lg:flex-row gap-3 p-4 md:w-2/3 w-full h-full border border-separate border-dotted' : 'card flex items-center flex-col p-4 md:w-2/3 w-full h-full border border-separate border-dotted'"
+        :class="request ? 'card flex items-center flex-col  lg:flex-row gap-3 justify-center p-4 md:w-2/3 w-full h-96 border border-separate border-dotted' : 'card flex items-center justify-center flex-col p-4 md:w-2/3 w-full h-96 border border-separate border-dotted'"
       >
         <form
           action=""
-          class="w-full h-full flex flex-col items-center justify-center"
+          class="w-full h-64 flex flex-col items-center justify-center"
         >
         <h1
           :class="
@@ -43,7 +48,6 @@
           Are you shoure to upload an image?
         </h1> -->
           <span
-            class="flex items-center justify-center flex-col text-center"
             :class="
               file
                 ? 'hidden'
@@ -80,7 +84,7 @@
           >
             <img
               :src="file"
-              class="w-auto h-[50vh] md:object-cover md:h-[50vh]"
+              class="w-auto h-64 md:object-cover md:h-64"
               alt=""
             />
           <span :class="request ? 'hidden' : 'flex items-center justify-center w-full gap-1'">
@@ -102,6 +106,7 @@
 </template>
 <script setup>
 import Nav from "../components/Nav/Main.vue";
+import Chat from "../components/QuestionChat/Main.vue";
 import { ref } from "vue";
 import router from "@/router";
 import Swal from "sweetalert2";
