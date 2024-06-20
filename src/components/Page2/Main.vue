@@ -26,7 +26,10 @@
           </div>
         </div>
       </div>
-      <div data-aos="zoom-in-down" class="right">
+      <div data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" class="right">
         <div
           id="default-carousel"
           class="relative w-full"
