@@ -1,7 +1,7 @@
 <template>
   <section class="h-[90vh] flex items-center justify-center">
    <div class="container flex items-center  p-4">
-     <div class="left flex items-center md:w-2/3 justify-center">
+     <div data-aos="fade-down-right" class="left flex items-center md:w-2/3 justify-center">
         <div class="card flex items-center md:w-3/4 justify-center">
           <div class="content flex flex-col gap-3">
             <h1 class="title font-bold text-6xl lg:text-8xl md:text-start text-center">

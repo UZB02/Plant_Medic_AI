@@ -156,6 +156,5 @@ const cancel = () => {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white; 
 } */
 </style>

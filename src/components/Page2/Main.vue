@@ -1,7 +1,9 @@
 <template>
       <section class="h-[100vh] flex items-center justify-center">
     <div class="container px-3 grid grid-cols-1 md:grid-cols-2 gap-3">
-      <div class="left flex items-center justify-center">
+      <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="left flex items-center justify-center">
         <div class="card flex items-center justify-center">
           <div class="content flex flex-col items-center justify-center gap-3">
             <h1 class="title font-bold text-6xl lg:text-8xl text-center">
@@ -24,7 +26,8 @@
           </div>
         </div>
       </div>
-      <div class="right">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom" class="right">
         <div
           id="default-carousel"
           class="relative w-full"
