@@ -23,7 +23,7 @@
     </span>
       </div>
       <div
-        :class="request ? 'card flex items-center flex-col  lg:flex-row gap-3 justify-center p-4 md:w-2/3 w-full h-96 border border-separate border-dotted' : 'card flex items-center justify-center flex-col p-4 md:w-2/3 w-full h-96 border border-separate border-dotted'"
+        :class="request ? 'card flex items-center flex-col lg:flex-row gap-3 justify-center p-4 md:w-2/3 w-full h-96 border border-separate border-dotted' : 'card bg-red-400 flex items-center justify-center flex-col p-4 md:w-2/3 w-full h-96 border border-separate border-dotted'"
       >
         <form
           action=""
@@ -38,15 +38,6 @@
         >
           Hi! How Can I Help You?
         </h1>
-        <!-- <h1
-          :class="
-            file
-              ? 'flex items-center justify-center flex-col text-center'
-              : 'hidden'
-          "
-        >
-          Are you shoure to upload an image?
-        </h1> -->
           <span
             :class="
               file
@@ -84,7 +75,7 @@
           >
             <img
               :src="file"
-              class="w-auto h-64 md:object-cover md:h-64"
+              class="w-auto h-28 md:object-cover lg:h-64"
               alt=""
             />
           <span :class="request ? 'hidden' : 'flex items-center justify-center w-full gap-1'">
@@ -99,7 +90,7 @@
           </span>
           </span>
         </form>
-        <textarea name="" disabled id="" cols="30" :class="request ? 'w-full h-full outline-none border-none' : 'hidden'" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat possimus quidem perspiciatis unde? Praesentium, cumque enim incidunt delectus cupiditate quae eligendi perferendis beatae neque ducimus adipisci non sapiente officia eos voluptatibus nesciunt. Itaque vero perferendis enim saepe. Repudiandae commodi saepe libero quos perspiciatis in porro ipsa inventore aliquam magni illo optio sequi totam aspernatur sapiente earum error, aliquid deleniti blanditiis officia! Architecto fuga provident quasi dignissimos quia soluta ad illo quas officiis, vitae deserunt repellendus natus. Non animi aliquid sint optio ad consequatur natus placeat harum omnis qui quos doloremque maiores modi itaque, sit molestiae quis dolore quo dignissimos atque suscipit. Reiciendis aliquid vitae, accusantium sunt cum quibusdam sapiente consectetur tenetur magnam rerum natus laboriosam ipsam nihil qui et reprehenderit placeat omnis asperiores magni praesentium exercitationem sit officia. Illum quaerat, quidem eum recusandae minus ratione facilis incidunt explicabo quis quisquam dicta eaque ut quod alias similique delectus tenetur vel, ipsam vitae tempore aliquid totam dolor atque expedita! Pariatur consequuntur iste excepturi reprehenderit sunt hic quam aperiam facilis minima, repellat possimus debitis eos eum provident veniam? Ut tenetur aperiam eos repudiandae ullam eius quasi, mollitia dolor officia nam odit a optio rerum delectus soluta error nostrum earum? Earum, ab id.</textarea>
+        <textarea name="" disabled id="" cols="30" :class="request ? 'w-full h-full text-sm md:text-base outline-none border-none' : 'hidden'" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat possimus quidem perspiciatis unde? Praesentium, cumque enim incidunt delectus cupiditate quae eligendi perferendis beatae neque ducimus adipisci non sapiente officia eos voluptatibus nesciunt. Itaque vero perferendis enim saepe. Repudiandae commodi saepe libero quos perspiciatis in porro ipsa inventore aliquam magni illo optio sequi totam aspernatur sapiente earum error, aliquid deleniti blanditiis officia! Architecto fuga provident quasi dignissimos quia soluta ad illo quas officiis, vitae deserunt repellendus natus. Non animi aliquid sint optio ad consequatur natus placeat harum omnis qui quos doloremque maiores modi itaque, sit molestiae quis dolore quo dignissimos atque suscipit. Reiciendis aliquid vitae, accusantium sunt cum quibusdam sapiente consectetur tenetur magnam rerum natus laboriosam ipsam nihil qui et reprehenderit placeat omnis asperiores magni praesentium exercitationem sit officia. Illum quaerat, quidem eum recusandae minus ratione facilis incidunt explicabo quis quisquam dicta eaque ut quod alias similique delectus tenetur vel, ipsam vitae tempore aliquid totam dolor atque expedita! Pariatur consequuntur iste excepturi reprehenderit sunt hic quam aperiam facilis minima, repellat possimus debitis eos eum provident veniam? Ut tenetur aperiam eos repudiandae ullam eius quasi, mollitia dolor officia nam odit a optio rerum delectus soluta error nostrum earum? Earum, ab id.</textarea>
       </div>
     </div>
   </section>
@@ -147,6 +138,9 @@ const cancel = () => {
 }
 </script>
 <style scoped>
+textarea{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 /* section{
       background-image: url("https://img.goodfon.ru/original/1920x1080/b/16/3d-robot-belyy-fon.jpg");
   background-repeat: no-repeat;
