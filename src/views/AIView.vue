@@ -23,7 +23,7 @@
     </span>
       </div>
       <div
-        :class="request ? 'card flex items-center flex-col lg:flex-row gap-3 justify-center p-4 md:w-2/3 w-full h-96 border border-separate border-dotted' : 'card bg-red-400 flex items-center justify-center flex-col p-4 md:w-2/3 w-full h-96 border border-separate border-dotted'"
+        :class="request ? 'card flex items-center flex-col lg:flex-row gap-3 justify-center p-4 md:w-2/3 w-full h-96 border border-separate border-dotted' : 'card  flex items-center justify-center flex-col p-4 md:w-2/3 w-full h-96 border border-separate border-dotted'"
       >
         <form
           action=""
