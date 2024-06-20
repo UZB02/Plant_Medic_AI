@@ -57,7 +57,7 @@
         <li>
           <span
             @click="router.push('/')"
-            class="block py-2 px-3 text-white bg-lime-700 rounded md:bg-transparent md:text-lime-700 md:p-0 md:dark:text-lime-500"
+            class="block py-2 px-3 cursor-pointer text-white bg-lime-700 rounded md:bg-transparent md:text-lime-700 md:p-0 md:dark:text-lime-500"
             >Home</span
           >
         </li>
