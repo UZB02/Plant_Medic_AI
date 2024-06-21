@@ -1,6 +1,6 @@
 <template>
   <Nav></Nav>
-  <section class="py-24 h-[100vh] flex">
+  <section class="py-24 h-[88.9vh] flex">
     <div class="conatainer w-full flex items-center justify-center">
       <form class="max-w-sm mx-auto w-full">
         <div class="mb-5">
@@ -41,7 +41,7 @@
         >
           Submit
         </button>
-        <span class="flex w-full justify-end text-sm text-gray-500 dark:text-gray-400">
+        <span class="flex w-full mt-3 justify-end text-sm text-gray-500 dark:text-gray-400">
               <p class="text-center text-sm text-gray-500 dark:text-gray-400">Not registered? <span @click="router.push('/register')" class="font-semibold text-lime-500 hover:underline dark:text-lime-400 cursor-pointer">Create account</span></p>
         </span>
       </form>
@@ -75,7 +75,7 @@ function login() {
 </script>
 <style scoped>
 section {
-  background-image: url("https://bogatyr.club/uploads/posts/2023-03/1679143074_bogatyr-club-p-fon-kriptovalyuta-foni-instagram-55.png");
+  background: url(../../img/svg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;

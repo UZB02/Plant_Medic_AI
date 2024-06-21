@@ -1,6 +1,6 @@
 <template>
   <Nav></Nav>
-  <section class="py-24 h-[100vh] flex">
+  <section class="py-24 h-[88.9vh] flex">
     <div class="conatainer w-full flex items-center justify-center">
       <form class="max-w-sm mx-auto w-full">
         <div class="mb-5">
@@ -104,7 +104,7 @@ function register() {
 </script>
 <style scoped>
 section {
-  background-image: url("https://bogatyr.club/uploads/posts/2023-03/1679143074_bogatyr-club-p-fon-kriptovalyuta-foni-instagram-55.png");
+    background: url(../../img/svg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
