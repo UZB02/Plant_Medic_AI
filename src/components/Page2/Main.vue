@@ -1,5 +1,5 @@
 <template>
-      <section class="h-[100vh] flex items-center justify-center">
+      <section class="h-[90vh] flex  items-center justify-center">
     <div class="container px-3 grid grid-cols-1 md:grid-cols-2 gap-3">
       <div data-aos="fade-right"
      data-aos-offset="200"

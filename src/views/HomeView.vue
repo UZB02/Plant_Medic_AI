@@ -10,7 +10,9 @@ import Page3 from "@/components/Page3/Main.vue";
 
 <template>
   <Nav></Nav>
-  <Page1></Page1>
+  <section class="felex flex-col items-center gap-5 justify-center">
+      <Page1></Page1>
   <Page2></Page2>
   <Page3></Page3>
+  </section>
 </template>
