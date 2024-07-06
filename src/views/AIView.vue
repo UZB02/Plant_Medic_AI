@@ -27,7 +27,7 @@
       </div>
       <div :class="file ? 'flex' : 'hidden'" class="sendimg w-full h-80 flex items-center justify-center flex-col gap-3 relative">
         <img :src="file" alt="Your Img" class="w-full md:w-1/2 h-full object-cover rounded-lg">
-        <div class="actions flex w-1/2 items-center justify-center">
+        <div class="actions flex w-full md:w-1/2 items-center justify-center">
                   <button @click="sendImg()" type="button" class="text-white w-1/2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Send</button>
         <button @click="camcell()" type="button" class="focus:outline-none w-1/2 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Cancel</button>
         </div>
