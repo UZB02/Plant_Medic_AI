@@ -17,7 +17,7 @@
                 />
               </svg>
             </button>
-            <span><h1>Upload a picture and I will answer you!</h1></span>
+            <span class="flex items-center justify-center"><h1>Upload a picture and I will answer you!</h1><img src="https://i.pinimg.com/originals/de/c3/9f/dec39fb225fd16cdce4562a10c520549.gif" class="w-10 h-10" alt=""></span>
             <input
               type="file"
               ref="fileInput"
@@ -42,7 +42,7 @@
       </div>
       <span class="flex items-center justify-end gap-2">
         <div class="refresh">
-          <svg clip-rule="evenodd" data-tooltip-target="tooltip-top" data-tooltip-placement="top" width="24" class="cursor-pointer" height="24" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m3.508 6.726c1.765-2.836 4.911-4.726 8.495-4.726 5.518 0 9.997 4.48 9.997 9.997 0 5.519-4.479 9.999-9.997 9.999-5.245 0-9.553-4.048-9.966-9.188-.024-.302.189-.811.749-.811.391 0 .715.3.747.69.351 4.369 4.012 7.809 8.47 7.809 4.69 0 8.497-3.808 8.497-8.499 0-4.689-3.807-8.497-8.497-8.497-3.037 0-5.704 1.597-7.206 3.995l1.991.005c.414 0 .75.336.75.75s-.336.75-.75.75h-4.033c-.414 0-.75-.336-.75-.75v-4.049c0-.414.336-.75.75-.75s.75.335.75.75z" fill-rule="nonzero"/></svg>
+          <svg clip-rule="evenodd" @click="refresh()" data-tooltip-target="tooltip-top" data-tooltip-placement="top" width="24" class="cursor-pointer" height="24" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m3.508 6.726c1.765-2.836 4.911-4.726 8.495-4.726 5.518 0 9.997 4.48 9.997 9.997 0 5.519-4.479 9.999-9.997 9.999-5.245 0-9.553-4.048-9.966-9.188-.024-.302.189-.811.749-.811.391 0 .715.3.747.69.351 4.369 4.012 7.809 8.47 7.809 4.69 0 8.497-3.808 8.497-8.499 0-4.689-3.807-8.497-8.497-8.497-3.037 0-5.704 1.597-7.206 3.995l1.991.005c.414 0 .75.336.75.75s-.336.75-.75.75h-4.033c-.414 0-.75-.336-.75-.75v-4.049c0-.414.336-.75.75-.75s.75.335.75.75z" fill-rule="nonzero"/></svg>
           
        <div id="tooltip-top" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip on top
@@ -72,6 +72,11 @@ const triggerFileInput = () => {
 };
 
 const camcell = () => {
+  file.value = "";
+}
+
+const refresh = () => {
+  request.value = false;
   file.value = "";
 }
 
