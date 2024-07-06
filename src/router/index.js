@@ -25,6 +25,11 @@ const router = createRouter({
       name: "AI",
       component: () => import("../views/AIView.vue"),
     },
+    {
+      path:"/chat",
+      name:"Chat",
+      component: () => import("../components/QuestionChat/Main.vue"),
+    }
     // {
     //   path: '/about',
     //   name: 'about',
