@@ -1,51 +1,10 @@
 <template>
   <Nav></Nav>
-  <section class="h-[80vh] flex items-center justify-center p-4 pt-14 relative">
-    <div
-      class="container pt-11 pb-4 flex items-center gap-3 justify-center flex-col md:flex-row"
-    >
-      <div class="flex flex-col items-center justify-center">
-    <span class="flex flex-col md:flex-row items-center justify-center">
-          <h1
-          class="md:text-4xl text-xl font-bold text-center uppercase font-sans"
-        >
-          Plant Medic <span class="text-lime-500">AI</span>
-        </h1>
-        <img
-          width="100px"
-          height="100px"
-          src="https://cdn.dribbble.com/users/690291/screenshots/3507754/untitled-1.gif"
-          alt=""
-        />
-    </span>
-    <span class="w-full">
-      <Chat></Chat>
-    </span>
-      </div>
-      <div
-        :class="request ? 'card flex items-center flex-col lg:flex-row gap-3 justify-center p-4 md:w-2/3 w-full h-96 border border-separate border-dotted' : 'card  flex items-center justify-center flex-col p-4 md:w-2/3 w-full h-96 border border-separate border-dotted'"
-      >
-        <form
-          action=""
-          class="w-full h-64 flex flex-col items-center justify-center"
-        >
-        <h1
-          :class="
-            file
-              ? 'hidden'
-              : 'flex items-center justify-center flex-col text-center'
-          "
-        >
-          Hi! How Can I Help You?
-        </h1>
-          <span
-            :class="
-              file
-                ? 'hidden'
-                : 'flex items-center justify-center flex-col text-center'
-            "
-          >
-            <button @click="triggerFileInput" type="button">
+  <section class="h-[80vh] w-full p-4 pt-7 relative">
+    <div class="container flex items-center justify-center">
+    <div :class="request ? 'hidden' : 'flex flex-col py-2 w-full md:w-4/5 gap-3 realative'">
+        <div :class="file ? 'hidden' : 'down w-full flex items-center justify-center flex-col'">
+          <button @click="triggerFileInput" type="button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="150"
@@ -65,39 +24,41 @@
               @change="handleFileUpload"
               style="display: none"
             />
-          </span>
-          <span
-            :class="
-              file
-                ? 'w-full h-full flex items-center justify-center flex-col text-center'
-                : 'hidden'
-            "
-          >
-            <img
-              :src="file"
-              class="w-auto h-28 md:object-cover lg:h-64"
-              alt=""
-            />
-          <span :class="request ? 'hidden' : 'flex items-center justify-center w-full gap-1'">
-              <button
-              @click="sendFile()"
-              type="button"
-              class="text-white flex items-center w-1/2 md:w-1/3 justify-center gap-1 bg-lime-500 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-lime-600 dark:hover:bg-lime-700 mt-3 dark:focus:ring-lime-800"
-            >
-              Send
-            </button>
-            <button @click="cancel()" type="button" class="text-white flex items-center w-1/2 md:w-1/3 justify-center gap-1 bg-red-500 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 mt-3 dark:focus:ring-red-800">Cancel</button>
-          </span>
-          </span>
-        </form>
-        <textarea name="" disabled id="" cols="30" :class="request ? 'w-full h-full text-sm md:text-base outline-none border-none' : 'hidden'" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat possimus quidem perspiciatis unde? Praesentium, cumque enim incidunt delectus cupiditate quae eligendi perferendis beatae neque ducimus adipisci non sapiente officia eos voluptatibus nesciunt. Itaque vero perferendis enim saepe. Repudiandae commodi saepe libero quos perspiciatis in porro ipsa inventore aliquam magni illo optio sequi totam aspernatur sapiente earum error, aliquid deleniti blanditiis officia! Architecto fuga provident quasi dignissimos quia soluta ad illo quas officiis, vitae deserunt repellendus natus. Non animi aliquid sint optio ad consequatur natus placeat harum omnis qui quos doloremque maiores modi itaque, sit molestiae quis dolore quo dignissimos atque suscipit. Reiciendis aliquid vitae, accusantium sunt cum quibusdam sapiente consectetur tenetur magnam rerum natus laboriosam ipsam nihil qui et reprehenderit placeat omnis asperiores magni praesentium exercitationem sit officia. Illum quaerat, quidem eum recusandae minus ratione facilis incidunt explicabo quis quisquam dicta eaque ut quod alias similique delectus tenetur vel, ipsam vitae tempore aliquid totam dolor atque expedita! Pariatur consequuntur iste excepturi reprehenderit sunt hic quam aperiam facilis minima, repellat possimus debitis eos eum provident veniam? Ut tenetur aperiam eos repudiandae ullam eius quasi, mollitia dolor officia nam odit a optio rerum delectus soluta error nostrum earum? Earum, ab id.</textarea>
       </div>
+      <div :class="file ? 'flex' : 'hidden'" class="sendimg w-full h-80 flex items-center justify-center flex-col gap-3 relative">
+        <img :src="file" alt="Your Img" class="w-full md:w-1/2 h-full object-cover rounded-lg">
+        <div class="actions flex w-1/2 items-center justify-center">
+                  <button @click="sendImg()" type="button" class="text-white w-1/2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Send</button>
+        <button @click="camcell()" type="button" class="focus:outline-none w-1/2 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div :class="request ? 'flex flex-col py-2 border p-3 rounded-lg border-dashed w-full md:w-4/5 gap-3 realative' : 'hidden'">
+      <div class="img sendimg w-full h-80 flex items-center justify-center flex-col gap-3 relative">
+        <img :src="file" alt="Your Img" class="w-full md:w-1/2 h-full object-cover rounded-lg">
+      </div>
+      <div class="ansver">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque est velit error voluptas architecto eos consequuntur labore officia exercitationem beatae ab, nisi, porro quos aperiam possimus! Ratione deserunt, distinctio commodi, fuga esse itaque impedit aut laudantium rerum, odio fugit praesentium placeat nam voluptas molestias aliquid ex error cumque sunt vero corporis saepe. Deleniti vero ut culpa, delectus quasi fugiat dolorum ipsam adipisci laborum! Quos recusandae quam fugit vero magnam doloremque ratione soluta labore, id est corrupti minima, incidunt et numquam odit dolore ad pariatur cupiditate nihil nesciunt! Optio tempora veritatis ratione repudiandae distinctio quam ex. Facilis aperiam vitae dolores tempore fugit. Omnis illo vero vitae enim, recusandae hic nesciunt quam, velit amet magni, modi ex maxime! Excepturi veritatis iusto odit quaerat odio suscipit nemo minima, recusandae maxime officiis obcaecati necessitatibus accusamus hic eius, vel vitae enim quidem magni nihil cum consequuntur exercitationem! Velit, molestias, ipsa at eveniet quia vitae dolorum libero reprehenderit placeat deserunt voluptate voluptatem aliquam, recusandae facilis rem. Laboriosam libero placeat sit voluptatibus, eum suscipit repellendus beatae ratione nemo reiciendis quae perspiciatis cupiditate eligendi earum quo eaque illo natus aperiam dolorum quisquam saepe fuga quasi architecto? Repudiandae voluptas nam iusto blanditiis at, laboriosam architecto, repellat est dolorum aliquid hic similique eveniet ipsa maiores consequuntur aliquam a rerum tempore. Veniam eos nulla excepturi nostrum nobis reprehenderit nesciunt, consequatur error cumque quasi, quisquam ipsa voluptatum. Nostrum molestiae optio deleniti, voluptas accusantium pariatur adipisci! Odit adipisci magnam nobis sed ea odio quas, modi accusantium voluptatum repudiandae debitis quod unde libero ex, laboriosam nam quaerat, quisquam corrupti molestias natus repellendus similique aliquam exercitationem! Ducimus molestiae nihil dignissimos in incidunt atque aperiam molestias beatae vero voluptatem obcaecati, distinctio blanditiis recusandae provident eos, quidem, veritatis velit ipsum? Voluptatum quod aspernatur odit unde, ratione hic perferendis quisquam debitis corrupti accusantium aperiam quae quis doloremque non!</p>
+      </div>
+      <span class="flex items-center justify-end gap-2">
+        <div class="refresh">
+          <svg clip-rule="evenodd" data-tooltip-target="tooltip-top" data-tooltip-placement="top" width="24" class="cursor-pointer" height="24" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m3.508 6.726c1.765-2.836 4.911-4.726 8.495-4.726 5.518 0 9.997 4.48 9.997 9.997 0 5.519-4.479 9.999-9.997 9.999-5.245 0-9.553-4.048-9.966-9.188-.024-.302.189-.811.749-.811.391 0 .715.3.747.69.351 4.369 4.012 7.809 8.47 7.809 4.69 0 8.497-3.808 8.497-8.499 0-4.689-3.807-8.497-8.497-8.497-3.037 0-5.704 1.597-7.206 3.995l1.991.005c.414 0 .75.336.75.75s-.336.75-.75.75h-4.033c-.414 0-.75-.336-.75-.75v-4.049c0-.414.336-.75.75-.75s.75.335.75.75z" fill-rule="nonzero"/></svg>
+          
+       <div id="tooltip-top" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+    Tooltip on top
+    <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
+        </div>
+        <div class="copy">
+          <svg clip-rule="evenodd" width="24" height="24" class="cursor-pointer" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 18h-3c-.48 0-1-.379-1-1v-14c0-.481.38-1 1-1h14c.621 0 1 .522 1 1v3h3c.621 0 1 .522 1 1v14c0 .621-.522 1-1 1h-14c-.48 0-1-.379-1-1zm1.5-10.5v13h13v-13zm9-1.5v-2.5h-13v13h2.5v-9.5c0-.481.38-1 1-1z" fill-rule="nonzero"/></svg>
+        </div>
+      </span>
+    </div>
     </div>
   </section>
 </template>
 <script setup>
 import Nav from "../components/Nav/Main.vue";
-import Chat from "../components/QuestionChat/Main.vue";
 import { ref } from "vue";
 import router from "@/router";
 import Swal from "sweetalert2";
@@ -109,6 +70,21 @@ const request = ref(false);
 const triggerFileInput = () => {
   fileInput.value.click();
 };
+
+const camcell = () => {
+  file.value = "";
+}
+
+const sendImg = () => {
+  Swal.fire({
+    position: "top-center",
+    icon: "success",
+    title: "Send your image successfully!",
+    showConfirmButton: false,
+    timer: 1500,
+  })
+  request.value = true;
+}
 
 const handleFileUpload = (event) => {
   file.value = event.target.files[0];
