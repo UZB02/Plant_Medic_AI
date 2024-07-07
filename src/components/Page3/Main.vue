@@ -1,20 +1,13 @@
 <template>
   <section class="h-[90vh] py-8">
       <div class="container h-full flex items-center relative justify-center flex-col">
-        <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" class="roboimg absolute left-0 -z-10 bottom-0">
-            <img src="../../img/pngegg.png" class="w-72" alt="">
-        </div>
-        <div data-aos="zoom-out" class="roboimg absolute right-24 -z-10 top-0">
-            <img src="../../img/robopng.png" class="w-72" alt="">
-        </div>
         <div class="left w-full flex items-center justify-center">
             <div class=" w-full flex items-center justify-center">
                 <div class="content w-full flex flex-col items-center justify-center gap-3">
                     <h1 class="title font-bold text-6xl lg:text-8xl text-center">
                         Our Team
                     </h1>
-                    <div class="cards flex w-full flex-wrap items-center justify-center gap-4">
+                    <div class="cards flex w-full flex-wrap items-center justify-center gap-4 pb-2">
                         <div class="w-full py-2 max-w-80 bg-white opacity-90 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <div class="flex flex-col items-center">
         <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="https://avatars.mds.yandex.net/i?id=49e0128d8e21c4e148d75404725d6140d84cbbe6-10350400-images-thumbs&n=13" alt="Bonnie image"/>
