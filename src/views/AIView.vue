@@ -92,7 +92,10 @@ const refresh = () => {
 }
 
 const sendImg = () => {
-  Swal.fire({
+  if (!localStorage.getItem("token")) {
+    router.push("/login");
+  }else{
+     Swal.fire({
     position: "top-center",
     icon: "success",
     title: "Send your image successfully!",
@@ -100,6 +103,7 @@ const sendImg = () => {
     timer: 1500,
   })
   request.value = true;
+  }
 }
 
 const handleFileUpload = (event) => {

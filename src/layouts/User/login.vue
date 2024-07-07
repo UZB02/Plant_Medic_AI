@@ -1,7 +1,8 @@
 <template>
   <Nav></Nav>
-  <section class="py-24 h-[88.9vh] flex">
-    <div class="conatainer w-full flex items-center justify-center">
+  <section class="py-24 h-[88.9vh]">
+    <div class="conatainer w-full flex items-center flex-col p-5 justify-center">
+      <h1 class="text-3xl font-bold mb-5 text-black">Login</h1>
       <form class="max-w-sm mx-auto w-full">
         <div class="mb-5">
           <label

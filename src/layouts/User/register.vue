@@ -1,7 +1,8 @@
 <template>
   <Nav></Nav>
   <section class="py-24 h-[88.9vh] flex">
-    <div class="conatainer w-full flex items-center justify-center">
+    <div class="conatainer w-full flex items-center flex-col justify-center p-2">
+      <h1 class="text-3xl font-bold mb-5 text-black">Register</h1>
       <form class="max-w-sm mx-auto w-full">
         <div class="mb-5">
           <label
