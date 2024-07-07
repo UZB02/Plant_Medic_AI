@@ -1,7 +1,7 @@
 <template>
   <Nav></Nav>
   <section class="h-[80vh] w-full p-4 pt-7 relative">
-    <div class="container flex items-center justify-center">
+    <div class="container flex items-center py-3 justify-center">
     <div :class="request ? 'hidden' : 'flex flex-col py-2 w-full md:w-4/5 gap-3 realative'">
         <div :class="file ? 'hidden' : 'down w-full flex items-center justify-center flex-col'">
           <button @click="triggerFileInput" type="button">
@@ -33,29 +33,35 @@
         </div>
       </div>
     </div>
-    <div :class="request ? 'flex flex-col py-2 border p-3 rounded-lg border-dashed w-full md:w-4/5 gap-3 realative' : 'hidden'">
+    <div :class="request ? 'flex flex-col py-2 border shadow p-3 rounded-lg border-dashed w-full md:w-4/5 gap-3 realative' : 'hidden'">
       <div class="img sendimg w-full h-80 flex items-center justify-center flex-col gap-3 relative">
         <img :src="file" alt="Your Img" class="w-full md:w-1/2 h-full object-cover rounded-lg">
       </div>
-      <div class="ansver">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque est velit error voluptas architecto eos consequuntur labore officia exercitationem beatae ab, nisi, porro quos aperiam possimus! Ratione deserunt, distinctio commodi, fuga esse itaque impedit aut laudantium rerum, odio fugit praesentium placeat nam voluptas molestias aliquid ex error cumque sunt vero corporis saepe. Deleniti vero ut culpa, delectus quasi fugiat dolorum ipsam adipisci laborum! Quos recusandae quam fugit vero magnam doloremque ratione soluta labore, id est corrupti minima, incidunt et numquam odit dolore ad pariatur cupiditate nihil nesciunt! Optio tempora veritatis ratione repudiandae distinctio quam ex. Facilis aperiam vitae dolores tempore fugit. Omnis illo vero vitae enim, recusandae hic nesciunt quam, velit amet magni, modi ex maxime! Excepturi veritatis iusto odit quaerat odio suscipit nemo minima, recusandae maxime officiis obcaecati necessitatibus accusamus hic eius, vel vitae enim quidem magni nihil cum consequuntur exercitationem! Velit, molestias, ipsa at eveniet quia vitae dolorum libero reprehenderit placeat deserunt voluptate voluptatem aliquam, recusandae facilis rem. Laboriosam libero placeat sit voluptatibus, eum suscipit repellendus beatae ratione nemo reiciendis quae perspiciatis cupiditate eligendi earum quo eaque illo natus aperiam dolorum quisquam saepe fuga quasi architecto? Repudiandae voluptas nam iusto blanditiis at, laboriosam architecto, repellat est dolorum aliquid hic similique eveniet ipsa maiores consequuntur aliquam a rerum tempore. Veniam eos nulla excepturi nostrum nobis reprehenderit nesciunt, consequatur error cumque quasi, quisquam ipsa voluptatum. Nostrum molestiae optio deleniti, voluptas accusantium pariatur adipisci! Odit adipisci magnam nobis sed ea odio quas, modi accusantium voluptatum repudiandae debitis quod unde libero ex, laboriosam nam quaerat, quisquam corrupti molestias natus repellendus similique aliquam exercitationem! Ducimus molestiae nihil dignissimos in incidunt atque aperiam molestias beatae vero voluptatem obcaecati, distinctio blanditiis recusandae provident eos, quidem, veritatis velit ipsum? Voluptatum quod aspernatur odit unde, ratione hic perferendis quisquam debitis corrupti accusantium aperiam quae quis doloremque non!</p>
+      <div class="ansver flex flex-col gap-3">
+        <span class="about">
+          <h1 class="font-bold md:text-2xl">About</h1>
+          <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut cupiditate libero, distinctio voluptatem iusto nemo, aperiam doloremque consectetur, reprehenderit saepe quis officiis modi vero voluptatibus! Impedit fugiat accusantium tenetur sequi et nesciunt quae animi earum sint corporis, vitae eum cupiditate id perspiciatis maiores ea odio commodi vel dolore suscipit. Eligendi?</p>
+        </span>
+        <span class="couse">
+          <h1 class="font-bold md:text-2xl">Couse of the problem</h1>
+          <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit aliquam alias dolores molestias architecto accusantium exercitationem, maiores magni assumenda officia est aspernatur libero eaque repudiandae. Hic odio minima laudantium facere culpa eius commodi, dolore natus suscipit cum minus, doloribus impedit facilis voluptate? Sit nesciunt reiciendis, suscipit eius facilis corporis magni, vero inventore facere veritatis accusamus incidunt repudiandae! Blanditiis, quis iure.</p>
+        </span>
+        <span class="solution">
+          <h1 class="font-bold md:text-2xl">Solution of the problem</h1>
+          <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae qui similique sit esse? Accusamus hic dolorum similique totam aspernatur? Minus, eos a tempore itaque, sed officiis quam necessitatibus excepturi quia, incidunt laborum expedita quos ad dicta similique asperiores distinctio eveniet. Id non blanditiis repellat qui? Animi quo mollitia accusamus quia eaque quis. Iusto laboriosam placeat autem aspernatur odit delectus illo quo modi! Et corrupti atque in deleniti impedit hic aperiam?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, nam? Tenetur non molestias dolores, nesciunt eos dolore asperiores quasi provident neque magnam placeat, dolor harum labore, repudiandae aut voluptas et.</p>
+        </span>
       </div>
       <span class="flex items-center justify-end gap-2">
         <div class="refresh">
-          <svg clip-rule="evenodd" @click="refresh()" data-tooltip-target="tooltip-top" data-tooltip-placement="top" width="24" class="cursor-pointer" height="24" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m3.508 6.726c1.765-2.836 4.911-4.726 8.495-4.726 5.518 0 9.997 4.48 9.997 9.997 0 5.519-4.479 9.999-9.997 9.999-5.245 0-9.553-4.048-9.966-9.188-.024-.302.189-.811.749-.811.391 0 .715.3.747.69.351 4.369 4.012 7.809 8.47 7.809 4.69 0 8.497-3.808 8.497-8.499 0-4.689-3.807-8.497-8.497-8.497-3.037 0-5.704 1.597-7.206 3.995l1.991.005c.414 0 .75.336.75.75s-.336.75-.75.75h-4.033c-.414 0-.75-.336-.75-.75v-4.049c0-.414.336-.75.75-.75s.75.335.75.75z" fill-rule="nonzero"/></svg>
-          
-       <div id="tooltip-top" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip on top
-    <div class="tooltip-arrow" data-popper-arrow></div>
-</div>
+          <svg clip-rule="evenodd" @click="refresh()" width="24" class="cursor-pointer" height="24" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m3.508 6.726c1.765-2.836 4.911-4.726 8.495-4.726 5.518 0 9.997 4.48 9.997 9.997 0 5.519-4.479 9.999-9.997 9.999-5.245 0-9.553-4.048-9.966-9.188-.024-.302.189-.811.749-.811.391 0 .715.3.747.69.351 4.369 4.012 7.809 8.47 7.809 4.69 0 8.497-3.808 8.497-8.499 0-4.689-3.807-8.497-8.497-8.497-3.037 0-5.704 1.597-7.206 3.995l1.991.005c.414 0 .75.336.75.75s-.336.75-.75.75h-4.033c-.414 0-.75-.336-.75-.75v-4.049c0-.414.336-.75.75-.75s.75.335.75.75z" fill-rule="nonzero"/></svg>
         </div>
         <div class="copy">
           <svg clip-rule="evenodd" width="24" height="24" class="cursor-pointer" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 18h-3c-.48 0-1-.379-1-1v-14c0-.481.38-1 1-1h14c.621 0 1 .522 1 1v3h3c.621 0 1 .522 1 1v14c0 .621-.522 1-1 1h-14c-.48 0-1-.379-1-1zm1.5-10.5v13h13v-13zm9-1.5v-2.5h-13v13h2.5v-9.5c0-.481.38-1 1-1z" fill-rule="nonzero"/></svg>
         </div>
       </span>
     </div>
-    <div class="chat">
-      <span class="absolute bottom-0 right-5 animate-pulse">
+    <div class="chat absolute bottom-0 right-5">
+      <span class="animate-pulse">
         <svg xmlns="http://www.w3.org/2000/svg" @click="() => router.push({path: '/chat'})" class="cursor-pointer"  width="35" fill="green" height="35" viewBox="0 0 24 24"><path d="M12 3c5.514 0 10 3.592 10 8.007 0 4.917-5.145 7.961-9.91 7.961-1.937 0-3.383-.397-4.394-.644-1 .613-1.595 1.037-4.272 1.82.535-1.373.723-2.748.602-4.265-.838-1-2.025-2.4-2.025-4.872-.001-4.415 4.485-8.007 9.999-8.007zm0-2c-6.338 0-12 4.226-12 10.007 0 2.05.738 4.063 2.047 5.625.055 1.83-1.023 4.456-1.993 6.368 2.602-.47 6.301-1.508 7.978-2.536 1.418.345 2.775.503 4.059.503 7.084 0 11.91-4.837 11.91-9.961-.001-5.811-5.702-10.006-12.001-10.006zm0 14h-5v-1h5v1zm5-3h-10v-1h10v1zm0-3h-10v-1h10v1z"/></svg>
       </span>
     </div>

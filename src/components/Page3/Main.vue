@@ -1,5 +1,5 @@
 <template>
-  <section class="h-[80vh] py-8 flex items-center justify-center">
+  <section class="h-[90vh] py-8">
       <div class="container h-full flex items-center relative justify-center flex-col">
         <div data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom" class="roboimg absolute left-0 -z-10 bottom-0">
