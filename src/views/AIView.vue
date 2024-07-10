@@ -1,6 +1,6 @@
 <template>
   <Nav></Nav>
-  <section class="h-[80vh] w-full p-4 pt-7 relative">
+  <section class="h-screen w-full p-4 pt-7 relative">
     <div class="container flex items-center py-3 justify-center">
     <div :class="request ? 'hidden' : 'flex flex-col py-2 w-full md:w-4/5 gap-3 realative'">
         <div :class="file ? 'hidden' : 'down w-full flex items-center justify-center flex-col'">
@@ -67,12 +67,14 @@
     </div>
     </div>
   </section>
+  <Footer class="mt-2"></Footer>
 </template>
 <script setup>
 import Nav from "../components/Nav/Main.vue";
 import { ref } from "vue";
 import router from "@/router";
 import Swal from "sweetalert2";
+import Footer from "../components/Footer/Main.vue";
 
 const fileInput = ref(null);
 const file = ref();
