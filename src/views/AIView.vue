@@ -35,20 +35,20 @@
     </div>
     <div :class="request ? 'flex flex-col py-2 border shadow p-3 rounded-lg border-dashed w-full md:w-4/5 gap-3 realative' : 'hidden'">
       <div class="img sendimg w-full h-80 flex items-center justify-center flex-col gap-3 relative">
-        <img :src="file" alt="Your Img" class="w-full md:w-1/2 h-full object-cover rounded-lg">
+        <img src="../img/kasallik2.png" alt="Your Img" class="w-full md:w-1/2 h-full object-cover rounded-lg">
       </div>
       <div class="ansver flex flex-col gap-3">
         <span class="about">
           <h1 class="font-bold md:text-2xl">About</h1>
-          <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut cupiditate libero, distinctio voluptatem iusto nemo, aperiam doloremque consectetur, reprehenderit saepe quis officiis modi vero voluptatibus! Impedit fugiat accusantium tenetur sequi et nesciunt quae animi earum sint corporis, vitae eum cupiditate id perspiciatis maiores ea odio commodi vel dolore suscipit. Eligendi?</p>
+          <p class="text-justify">This disease is caused by a fungus called Septoria lycopersici. Symptoms of this disease first appear on the lower leaves and then gradually spread to the upper leaves. In this disease, small circular, gray center with dark brown margin spots are formed on the underside of the leaves.</p>
         </span>
         <span class="couse">
           <h1 class="font-bold md:text-2xl">Couse of the problem</h1>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit aliquam alias dolores molestias architecto accusantium exercitationem, maiores magni assumenda officia est aspernatur libero eaque repudiandae. Hic odio minima laudantium facere culpa eius commodi, dolore natus suscipit cum minus, doloribus impedit facilis voluptate? Sit nesciunt reiciendis, suscipit eius facilis corporis magni, vero inventore facere veritatis accusamus incidunt repudiandae! Blanditiis, quis iure.</p>
+          <p class="text-justify">The symptoms of the disease on the stem and flowers are similar to that of the leaves. In case of severe infestation of disease, the leaves turn yellow and fall off.</p>
         </span>
         <span class="solution">
           <h1 class="font-bold md:text-2xl">Solution of the problem</h1>
-          <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae qui similique sit esse? Accusamus hic dolorum similique totam aspernatur? Minus, eos a tempore itaque, sed officiis quam necessitatibus excepturi quia, incidunt laborum expedita quos ad dicta similique asperiores distinctio eveniet. Id non blanditiis repellat qui? Animi quo mollitia accusamus quia eaque quis. Iusto laboriosam placeat autem aspernatur odit delectus illo quo modi! Et corrupti atque in deleniti impedit hic aperiam?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, nam? Tenetur non molestias dolores, nesciunt eos dolore asperiores quasi provident neque magnam placeat, dolor harum labore, repudiandae aut voluptas et.</p>
+          <p class="text-justify">Spraying of Mineb, Mancozeb, Chlorothalonil should be done to effectively prevent Septoria leaf blight disease. If required, spraying of above mentioned chemicals can be repeated at an interval of 8-10 days.</p>
         </span>
       </div>
       <span class="flex items-center justify-end gap-2">
@@ -60,7 +60,7 @@
         </div>
       </span>
     </div>
-    <div class="chat absolute bottom-0 right-5">
+    <div class="chat hidden absolute bottom-0 right-5">
       <span class="animate-pulse">
         <svg xmlns="http://www.w3.org/2000/svg" @click="() => router.push({path: '/chat'})" class="cursor-pointer"  width="35" fill="green" height="35" viewBox="0 0 24 24"><path d="M12 3c5.514 0 10 3.592 10 8.007 0 4.917-5.145 7.961-9.91 7.961-1.937 0-3.383-.397-4.394-.644-1 .613-1.595 1.037-4.272 1.82.535-1.373.723-2.748.602-4.265-.838-1-2.025-2.4-2.025-4.872-.001-4.415 4.485-8.007 9.999-8.007zm0-2c-6.338 0-12 4.226-12 10.007 0 2.05.738 4.063 2.047 5.625.055 1.83-1.023 4.456-1.993 6.368 2.602-.47 6.301-1.508 7.978-2.536 1.418.345 2.775.503 4.059.503 7.084 0 11.91-4.837 11.91-9.961-.001-5.811-5.702-10.006-12.001-10.006zm0 14h-5v-1h5v1zm5-3h-10v-1h10v1zm0-3h-10v-1h10v1z"/></svg>
       </span>

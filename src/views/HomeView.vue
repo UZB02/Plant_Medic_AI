@@ -5,6 +5,7 @@ import Nav from "@/components/Nav/Main.vue";
 import Page1 from "@/components/Page1/Main.vue";
 import Page2 from "@/components/Page2/Main.vue";
 import Page3 from "@/components/Page3/Main.vue";
+import Contact from "@/components/Contact/Main.vue";
 
 </script>
 
@@ -13,4 +14,5 @@ import Page3 from "@/components/Page3/Main.vue";
   <Page1></Page1>
   <Page2></Page2>
   <Page3></Page3>
+  <Contact></Contact>
 </template>
