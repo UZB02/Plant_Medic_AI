@@ -40,15 +40,50 @@
       <div class="ansver flex flex-col gap-3">
         <span class="about">
           <h1 class="font-bold md:text-2xl">About</h1>
-          <p class="text-justify">This disease is caused by a fungus called Septoria lycopersici. Symptoms of this disease first appear on the lower leaves and then gradually spread to the upper leaves. In this disease, small circular, gray center with dark brown margin spots are formed on the underside of the leaves.</p>
+          <p class="text-justify  text-[12px] md:text-base">This disease is caused by a fungus called Septoria lycopersici. Symptoms of this disease first appear on the lower leaves and then gradually spread to the upper leaves. In this disease, small circular, gray center with dark brown margin spots are formed on the underside of the leaves.</p>
         </span>
         <span class="couse">
           <h1 class="font-bold md:text-2xl">Couse of the problem</h1>
-          <p class="text-justify">The symptoms of the disease on the stem and flowers are similar to that of the leaves. In case of severe infestation of disease, the leaves turn yellow and fall off.</p>
+          <p class="text-justify  text-[12px] md:text-base">The symptoms of the disease on the stem and flowers are similar to that of the leaves. In case of severe infestation of disease, the leaves turn yellow and fall off.</p>
         </span>
         <span class="solution">
           <h1 class="font-bold md:text-2xl">Solution of the problem</h1>
-          <p class="text-justify">Spraying of Mineb, Mancozeb, Chlorothalonil should be done to effectively prevent Septoria leaf blight disease. If required, spraying of above mentioned chemicals can be repeated at an interval of 8-10 days.</p>
+          <p class="text-justify  text-[12px] md:text-base">Spraying of Mineb, Mancozeb, Chlorothalonil should be done to effectively prevent Septoria leaf blight disease. If required, spraying of above mentioned chemicals can be repeated at an interval of 8-10 days.</p>
+        </span>
+        <span class="solution">
+          <h1 class="font-bold md:text-2xl">Medicine for the disease</h1>
+          <div class="flex gap-7  items-center justify-center">
+          <div class="card w-[25%]">
+              <div class="left flex items-center justify-center">
+              <img src="https://www.ifoda.uz/uploads/1/Un1SwxJsFbM0Imfw9PTG_Wy_KhGCN3y1.jpg" class="w-full h-36 md:w-1/2 md:h-44" alt="">
+            </div>
+            <div class="right flex flex-col gap-2">
+              <h1 class="font-bold md:text-2xl">AGROFOS-D</h1>
+              <p class="text-justify">Septoria lycopersici is a disease of plants Lorem ipsum dolor sit amet..</p>
+              <button @click="(()=>{router.push('/products')})" target="_blank" class="text-white py-1 px-2 rounded-xl text-[12px] md:text-base bg-lime-500">Read more</button>
+            </div>
+          </div>
+          <div class="card w-[25%]">
+              <div class="left flex items-center justify-center">
+              <img src="https://www.ifoda.uz/uploads/1/7D57JDpxSIFOB2d_Eh4lIV73D_TNS8Ak.png" class="w-full h-36 md:w-1/2 md:h-44" alt="">
+            </div>
+            <div class="right flex flex-col gap-2">
+              <h1 class="font-bold md:text-2xl">БЕНТОГРАН</h1>
+              <p class="text-justify  text-[12px] md:text-base">Septoria lycopersici is a disease of plants Lorem ipsum dolor sit amet..</p>
+              <button @click="(()=>{router.push('/products')})" target="_blank" class="text-white py-1 px-2 rounded-xl text-[12px] md:text-base bg-lime-500">Read more</button>
+            </div>
+          </div>
+          <div class="card w-[25%]">
+              <div class="left flex items-center justify-center">
+              <img src="https://www.ifoda.uz/uploads/1/k24tXqOWMM-vIzQKosJnsUBexE8CfqAf.jpg" class="w-full h-36 md:w-1/2 md:h-44" alt="">
+            </div>
+            <div class="right flex flex-col gap-2">
+              <h1 class="font-bold text-sm md:text-2xl">ENTOXLOROK</h1>
+              <p class="text-justify  text-[12px] md:text-base">Septoria lycopersici is a disease of plants Lorem ipsum dolor sit amet..</p>
+              <button @click="(()=>{router.push('/products')})" target="_blank" class="text-white py-1 px-2 rounded-xl text-[12px] md:text-base bg-lime-500">Read more</button>
+            </div>
+          </div>
+          </div>
         </span>
       </div>
       <span class="flex items-center justify-end gap-2">
@@ -67,7 +102,7 @@
     </div>
     </div>
   </section>
-  <Footer class="mt-2"></Footer>
+  <!-- <Footer class="mt-2"></Footer> -->
 </template>
 <script setup>
 import Nav from "../components/Nav/Main.vue";
