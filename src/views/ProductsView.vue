@@ -43,7 +43,7 @@
         <div class="filter md:flex flex-col hidden  items-center gap-3 py-3 border-r-2 pr-3 w-[20%]">
         <span><h1 class="text-center text-3xl">Kategoriyalar</h1></span>
         <div class="flex md:flex-col flex-wrap">
-              <article class="flex cursor-pointer hover:bg-gray-100 w-full rounded-lg items-center justify-center">
+              <article @click="router.push('/products')" class="flex cursor-pointer hover:bg-gray-100 w-full rounded-lg items-center justify-center">
           <span class="flex w-full p-2 items-center justify-center gap-3">
             <div class="left border rounded-sm w-10 h-10 flex items-center justify-center"><img src="https://www.ifoda.uz/uploads/1/KsWmsmK4ho6oCPfkQI_z90lhY7DRwoWn.png" alt=""></div>
             <div class="right w-1/2"><h1 class="font-sans font-medium text-base ">Gerbitsitlar</h1></div>

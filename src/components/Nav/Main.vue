@@ -5,9 +5,8 @@
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
-      <a
-        href="https://flowbite.com/"
-        class="flex items-center space-x-3 rtl:space-x-reverse"
+      <span @click="router.push('/')"
+        class="flex items-center space-x-3 cursor-pointer rtl:space-x-reverse"
       >
         <img
           src="https://i.pinimg.com/originals/20/d8/e4/20d8e442c968b95349039e021e3e51c5.png"
@@ -18,7 +17,7 @@
           class="self-center :md:text-2xl text-xl font-semibold whitespace-nowrap dark:text-white"
           ><span class="flex flex-col"><span>Plant</span> <span>Medic <span class="text-lime-500">AI</span></span></span></h1
         >
-      </a>
+      </span>
       <div class="flex md:hidden md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button
       @click="toggleMenu"
