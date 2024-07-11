@@ -59,7 +59,7 @@
             </div>
             <div class="right flex flex-col gap-2">
               <h1 class="font-bold md:text-2xl">AGROFOS-D</h1>
-              <p class="text-justify">Septoria lycopersici is a disease of plants Lorem ipsum dolor sit amet..</p>
+             <p class="text-justify  text-[12px] md:text-base">Septoria lycopersici is a disease of plants Lorem ipsum dolor sit amet..</p>
               <button @click="(()=>{router.push('/products')})" target="_blank" class="text-white py-1 px-2 rounded-xl text-[12px] md:text-base bg-lime-500">Read more</button>
             </div>
           </div>
