@@ -9,8 +9,8 @@
          <img :src="product.img" alt="Product Image" class="md:w-1/2 md:h-60 h-32 my-4 rounded" />
         <div class="w-full h-60 md:h-[300px] overflow-hidden relative">
     <div ref="scrollPanel" class="w-full h-full overflow-y-auto">
-      <div class="w-full h-auto p-4">
-        <p  class="py-2 border-b text-justify border-gray-200">{{ product.about }}{{ product.about }}</p>
+      <div class="w-full h-auto">
+        <p  class="py-2 w-full text-justify border-gray-200">{{ product.about }}{{ product.about }}</p>
       </div>
     </div>
   </div>
