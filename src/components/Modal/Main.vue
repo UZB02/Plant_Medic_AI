@@ -1,12 +1,12 @@
 <template>
-  <div v-if="show" class="fixed inset-0 p-1 flex items-center justify-center bg-black bg-opacity-50">
-    <div class="bg-white p-5 rounded-lg shadow-lg max-w-2xl w-full">
+  <div v-if="show" class="fixed inset-0 p-1 mt-20 flex items-center justify-center bg-black bg-opacity-50">
+    <div class="bg-white px-5 rounded-lg shadow-lg max-w-2xl w-full">
       <div class="flex justify-between items-center">
         <h3 class="text-2xl font-bold">{{ product.name }}</h3>
         <button @click="close" class="text-black">&times;</button>
       </div>
      <div class="flex md:flex-row flex-col">
-         <img :src="product.img" alt="Product Image" class="md:w-1/2 md:h-60 h-40 my-4 rounded" />
+         <img :src="product.img" alt="Product Image" class="md:w-1/2 md:h-60 h-32 my-4 rounded" />
         <div class="w-full h-60 md:h-[300px] overflow-hidden relative">
     <div ref="scrollPanel" class="w-full h-full overflow-y-auto">
       <div class="w-full h-auto p-4">
