@@ -7,11 +7,9 @@
       </div>
      <div class="flex md:flex-row flex-col">
          <img :src="product.img" alt="Product Image" class="md:w-1/2 md:h-60 h-40 my-4 rounded" />
-      <!-- <p class="text-gray-800  text-justify">{{ product.about }}</p> -->
         <div class="w-full h-60 md:h-[300px] overflow-hidden relative">
     <div ref="scrollPanel" class="w-full h-full overflow-y-auto">
       <div class="w-full h-auto p-4">
-        <!-- Kontentingizni bu yerga qo'ying -->
         <p  class="py-2 border-b text-justify border-gray-200">{{ product.about }}{{ product.about }}</p>
       </div>
     </div>
@@ -56,5 +54,4 @@ const close = () => {
    ::-webkit-scrollbar{
         width: 0;
     }
-/* Modal styling */
 </style>
