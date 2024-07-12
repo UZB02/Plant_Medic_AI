@@ -15,8 +15,8 @@
 <form class="max-w-lg mx-auto">
     <div class="flex">
         <div class="relative ">
-            <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-s-2 border border-gray-300 focus:ring-lime-500 focus:border-lime-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-lime-500" placeholder="Search Mockups, Logos, Design Templates..." required />
-            <button type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-lime-700 rounded-e-lg border border-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800">
+            <input type="search" v-model="searchQuery" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-s-2 border border-gray-300 focus:ring-lime-500 focus:border-lime-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-lime-500" placeholder="Search Mockups, Logos, Design Templates..." required />
+            <button type="button" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-lime-700 rounded-e-lg border border-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                 </svg>
@@ -82,20 +82,20 @@
         </div>
       </div>
       <div
-        class="bottom p-2 flex md:flex-row flex-col flex-wrap items-center justify-center gap-2"
+        class="bottom w-full p-2 flex md:flex-row flex-col flex-wrap items-center justify-center gap-2"
       >
         <div
-          v-for="(item, index) in data"
+          v-for="(item, index) in filterData"
           :key="index"
-          class="md:w-[30%] w-4/5 max-w-[85%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          class="md:w-[30%] w-4/5 flex flex-col justify-between h-[300px] max-w-[85%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
         >
-          <a href="#" @click.prevent="openModal(item)">
+          <span class="cursor-pointer flex items-center justify-center" @click.prevent="openModal(item)">
             <img
-              class="w-full transition hover:scale-95 md:h-96 h-96  rounded-t-lg"
+              class="w-[120px] h-full transition hover:scale-95  rounded-t-lg"
               :src="item.img"
               alt="product image"
             />
-          </a>
+          </span>
           <div class="px-5 pb-5">
             <a href="#">
               <h5
@@ -138,13 +138,15 @@
 <script setup>
 import router from "@/router";
 import Nav from "@/components/Nav/Main.vue";
-import { ref } from "vue";
+import { ref,computed } from "vue";
 import Modal from "../components/Modal/Main.vue";
 
 const counts = ref(localStorage.getItem("counts"));
 
 const showModal = ref(false);
 const selectedProduct = ref({});
+const searchQuery = ref('')
+
 const openModal = (product) => {
   selectedProduct.value = product;
   showModal.value = true;
@@ -222,6 +224,12 @@ const data = ref([
     img: "https://www.ifoda.uz/uploads/1/k24tXqOWMM-vIzQKosJnsUBexE8CfqAf.jpg",
   },
 ]);
+
+const filterData=computed(()=>{
+    return data.value.filter(product => 
+    product.name.toLowerCase().includes(searchQuery.value.toLowerCase())
+  )
+})
 
 const add = ((id) => {
   const item = data.value.find((product) => product.id === id);
