@@ -157,7 +157,8 @@ const closeModal = () => {
   selectedProduct.value = {};
 };
 
-const data = ref([
+const data = ref(localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")) :
+[
   {
     id: 1,
     name: "AGROFOS-D",
@@ -225,6 +226,13 @@ const data = ref([
   },
 ]);
 
+// function countProduct() {
+//   for (var i = 0; i < data.value.length; i++) {
+//   counts.value = data.value[i].count;
+//   // total.value += data.value[i].price * data.value[i].count;
+//   console.log(data.value[i].count);  
+// }
+// }
 const filterData=computed(()=>{
     return data.value.filter(product => 
     product.name.toLowerCase().includes(searchQuery.value.toLowerCase())
@@ -233,50 +241,23 @@ const filterData=computed(()=>{
 
 const add = ((id) => {
   const item = data.value.find((product) => product.id === id);
+  console.log('item:', item);
   if (item) {
     item.count++;
-    console.log(item);
-
-    // Tanlangan mahsulotlarni `localStorage` ga saqlash
-    let selectedProducts = JSON.parse(localStorage.getItem("products")) || [];
-    const existingProductIndex = selectedProducts.findIndex(product => product.id === id);
-
-    if (existingProductIndex !== -1) {
-      selectedProducts[existingProductIndex].count = item.count;
-    } else {
-      selectedProducts.push({ ...item });
-    }
-
-    localStorage.setItem("products", JSON.stringify(selectedProducts));
+    localStorage.setItem("products", JSON.stringify(data.value)); 
+    counts.value++
+    localStorage.setItem("counts", counts.value);
   }
-    let selectedProducts = JSON.parse(localStorage.getItem("products")) || [];
-  counts.value = selectedProducts.reduce((total, product) => total + product.count, 0);
-  localStorage.setItem("counts", JSON.stringify(counts.value));
-  console.log('Buy count:', buy.value);
 });
 
 const remove = ((id) => {
   const item = data.value.find((product) => product.id === id);
   if (item && item.count > 0) {
     item.count--;
-
-    // Tanlangan mahsulotlarni `localStorage` ga saqlash
-    let selectedProducts = JSON.parse(localStorage.getItem("products")) || [];
-    const existingProductIndex = selectedProducts.findIndex(product => product.id === id);
-
-    if (existingProductIndex !== -1) {
-      if (item.count > 0) {
-        selectedProducts[existingProductIndex].count = item.count;
-      } else {
-        selectedProducts.splice(existingProductIndex, 1); // Mahsulotni ro'yxatdan o'chirish
-      }
-    }
-
-    localStorage.setItem("products", JSON.stringify(selectedProducts));
+    counts.value--
+    localStorage.setItem("counts", counts.value);
+    localStorage.setItem("products", JSON.stringify(data.value));
   }
-    let selectedProducts = JSON.parse(localStorage.getItem("products")) || [];
-  counts.value = selectedProducts.reduce((total, product) => total + product.count, 0);
-  console.log('counts:', counts.value);
 });
 </script>
 <style scoped></style>

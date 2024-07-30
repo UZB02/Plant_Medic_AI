@@ -113,7 +113,7 @@
       </div>
       
 
-<div class="relative  w-full overflow-x-auto shadow-md sm:rounded-lg">
+<div :class="products.length > 0 ? 'block' : 'hidden'">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -130,12 +130,15 @@
                     Narxi
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    Summa
+                </th>
+                <th scope="col" class="px-6 py-3">
                     Amal
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(item, index) in data" :key="index" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr v-for="(item, index) in products" :key="index" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td class="p-4">
                     <img :src="item.img" class="w-16 md:w-32 max-w-full max-h-full" alt="Apple Watch">
                 </td>
@@ -151,7 +154,7 @@
                             </svg>
                         </button> -->
                         <div>
-                            <input type="number" id="first_product" class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" :placeholder="item.count" required />
+                            <input type="number" id="first_product" class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" v-model="item.count" @input="updateCount(item)" required />
                         </div>
                         <!-- <button class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                             <span class="sr-only">Quantity button</span>
@@ -164,12 +167,18 @@
                 <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
                     ${{ item.price }}
                 </td>
+                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                    ${{ item.price*item.count }}
+                </td>
                 <td class="px-6 py-4">
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
             </tr>
         </tbody>
     </table>
+</div>
+<div :class="products.length==0 ? 'flex items-center justify-center' : 'hidden'">
+    <img src="https://i.pinimg.com/originals/bc/bd/99/bcbd99c43aea08b85d3c3a6b80a47b56.png" class="w-full" alt="Savat Bo'sh">
 </div>
 
     </div>
@@ -180,50 +189,31 @@ import Nav from "../components/Nav/Main.vue";
 import { ref } from "vue";
 import router from "@/router";
 
-const data = ref([
-  {
-    id: 1,
-    name: "AGROFOS-D",
-    count: 5,
-    price: 250,
-    ball:5,
-    about:
-      "Таъсир этиш хусусияти:Ушбу препарат олма қурти, цикадалар, шира, трипс, зарарли хасва, шиллиққурт, олма қурти, баргўрар қуртлар, ўргимчаккана, ғовакловчи пашша, намат канаси, куялар, тут парвонаси ва бошқа бир қатор зараркунандаларни йўқотишда юқори самарали инсектоакарицид",
-    img: "https://www.ifoda.uz/uploads/1/Un1SwxJsFbM0Imfw9PTG_Wy_KhGCN3y1.jpg",
-  },
-  {
-    id: 2,
-    name: "БЕНТОГРАН",
-    price: 270,
-    ball: 1,
-    count: 3,
-    about:
-      "Ғалла, маккажўхори, беда ва шолининг фаол ўсув даврида бир йиллик кенг баргли ва кўп йиллик бошоқли (сув хилол) бегона ўтларни йўқотишда қўлланилади.",
+const data = ref(localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")) : []);
+const products=ref(localStorage.getItem("buyProducts") ? JSON.parse(localStorage.getItem("buyProducts")) : []);
+function faindProduct() {
+  let buyproducts=ref([])
+  for (var i = 0; i < data.value.length; i++) {
+    if(data.value[i].count >0) {
+      buyproducts.value.push(data.value[i])
+      console.log(data.value[i].count*data.value[i].price);
+    }
+  }
+  localStorage.setItem("buyProducts", JSON.stringify(buyproducts.value));
+  console.log(buyproducts.value);
+  console.log(56);
+}
 
-    img: "https://www.ifoda.uz/uploads/1/7D57JDpxSIFOB2d_Eh4lIV73D_TNS8Ak.png",
-  },
-  {
-    id: 3,
-    name: "DALATE",
-    price: 160,
-    ball: 3,
-    count: 2,
-    about:
-      "Барча экинлардаги сўрувчи ва кемирувчи зараркунандалар ҳамда каналарга қарши инсектоакарицид. Ғалладаги зарарли хасва, ширалар, трипс, бошқа экинлардаги ўргимчаккана, оққанот, баргўрар қуртлар, каналар, дон қўнғизлари, чигирткалар, тут парвонаси, шиллиққурт, визилдоқ қўнғиз, фитономус, қовун пашшаси, узумбаргўрар қуртлари, мевахўрлар, ва бошқа зараркунандаларга қарши текканда таъсир этувчи самарали восита.",
+faindProduct()
 
-    img: "https://www.ifoda.uz/uploads/1/nQIkwVhixJx9VwA2hw1Qc2TGvRGeTfyl.jpg",
-  },
-  {
-    id: 4,
-    name: "DELTASIS",
-    price: 140,
-    balls: 2,
-    count: 7,
-    about:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, deleniti voluptatibus maxime fugit quo molestias ipsa dolorum veniam nisi atque similique nobis ratione odio ut a quaerat aut consectetur molestiae repellat eos. Autem dolore dolor doloremque? Placeat eaque aspernatur non ex, voluptate explicabo id asperiores? Nihil amet esse illum. Velit!",
-
-    img: "https://www.ifoda.uz/uploads/1/XBAMi1lQR-OFTIAFhDvpDg28OCQ0LyKC.jpg",
-  },
-]);
+function updateCount(item) {
+  for (var i = 0; i < data.value.length; i++) {
+    if (data.value[i].id === item.id) {
+      data.value[i].count = item.count;
+    }
+  }
+  localStorage.setItem("products", JSON.stringify(data.value));
+  // localStorage.setItem("counts", item.count);
+}
 </script>
 <style scoped></style>
