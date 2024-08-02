@@ -7,7 +7,8 @@
       >
         <span><h1 class="text-center text-3xl">Kategoriyalar</h1></span>
         <div class="flex md:flex-col flex-wrap">
-          <article @click="router.push('/products')"
+          <article
+            @click="router.push('/products')"
             class="flex cursor-pointer hover:bg-gray-100 w-full rounded-lg items-center justify-center"
           >
             <span class="flex w-full p-2 items-center justify-center gap-3">
@@ -111,76 +112,84 @@
           </article>
         </div>
       </div>
-      
 
-<div :class="products.length > 0 ? 'block' : 'hidden'">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <div :class="products.length > 0 ? 'w-full flex flex-wrap  md:w-[80%]' : 'hidden'">
+        <table
+          class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
             <tr>
-                <th scope="col" class="px-16 py-3">
-                    <span class="sr-only">Image</span>
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Mahsulot
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Miqdori
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Narxi
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Summa
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Amal
-                </th>
+              <th scope="col" class="px-16 py-3">
+                <span class="sr-only">Image</span>
+              </th>
+              <th scope="col" class="px-6 py-3">Mahsulot</th>
+              <th scope="col" class="px-6 py-3">Miqdori</th>
+              <th scope="col" class="px-6 py-3">Narxi</th>
+              <th scope="col" class="px-6 py-3">Summa</th>
+              <th scope="col" class="px-6 py-3">Amal</th>
             </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(item, index) in products" :key="index" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td class="p-4">
-                    <img :src="item.img" class="w-16 md:w-32 max-w-full max-h-full" alt="Apple Watch">
-                </td>
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    {{ item.name }}                                                  
-                </td>
-                <td class="px-6 py-4">
-                    <div class="flex items-center">
-                        <!-- <button class="inline-flex items-center justify-center p-1 me-3 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                            <span class="sr-only">Quantity button</span>
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
-                            </svg>
-                        </button> -->
-                        <div>
-                            <input type="number" id="first_product" class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" v-model="item.count" @input="updateCount(item)" required />
-                        </div>
-                        <!-- <button class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                            <span class="sr-only">Quantity button</span>
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                            </svg>
-                        </button> -->
-                    </div>
-                </td>
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    ${{ item.price }}
-                </td>
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    ${{ item.price*item.count }}
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
-                </td>
+          </thead>
+          <tbody>
+            <tr
+              v-for="(item, index) in products"
+              :key="index"
+              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+            >
+              <td class="p-4">
+                <img
+                  :src="item.img"
+                  class="w-16 md:w-32 max-w-full max-h-full"
+                  alt="Apple Watch"
+                />
+              </td>
+              <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                {{ item.name }}
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex items-center">
+                  <div>
+                    <input
+                      type="number"
+                      id="first_product"
+                      class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      v-model="item.count"
+                      @input="updateCount(item)"
+                      required
+                      min="0"
+                    />
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                ${{ item.price }}
+              </td>
+              <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                ${{ item.price * item.count }}
+              </td>
+              <td class="px-6 py-4">
+                <span
+                  @click="deletProduct(item.id)"
+                  class="font-medium cursor-pointer text-red-600 dark:text-red-500 hover:underline"
+                  >Remove</span
+                >
+              </td>
             </tr>
-        </tbody>
-    </table>
-</div>
-<div :class="products.length==0 ? 'flex items-center justify-center' : 'hidden'">
-    <img src="https://i.pinimg.com/originals/bc/bd/99/bcbd99c43aea08b85d3c3a6b80a47b56.png" class="w-full" alt="Savat Bo'sh">
-</div>
-
+          </tbody>
+        </table>
+      </div>
+      <div
+        :class="
+          products.length == 0 ? 'flex items-center justify-center' : 'hidden'
+        "
+      >
+        <img
+          src="https://i.pinimg.com/originals/bc/bd/99/bcbd99c43aea08b85d3c3a6b80a47b56.png"
+          class="w-full"
+          alt="Savat Bo'sh"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -189,31 +198,36 @@ import Nav from "../components/Nav/Main.vue";
 import { ref } from "vue";
 import router from "@/router";
 
-const data = ref(localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")) : []);
-const products=ref(localStorage.getItem("buyProducts") ? JSON.parse(localStorage.getItem("buyProducts")) : []);
-function faindProduct() {
-  let buyproducts=ref([])
-  for (var i = 0; i < data.value.length; i++) {
-    if(data.value[i].count >0) {
-      buyproducts.value.push(data.value[i])
-      console.log(data.value[i].count*data.value[i].price);
+const products = ref(
+  localStorage.getItem("buyProducts")
+    ? JSON.parse(localStorage.getItem("buyProducts"))
+    : []
+);
+
+function checked() {
+  for (let i = 0; i < products.value.length; i++) {
+    if (products.value[i].count === 0) {
+      products.value.splice(i, 1);
+      i--;
     }
   }
-  localStorage.setItem("buyProducts", JSON.stringify(buyproducts.value));
-  console.log(buyproducts.value);
-  console.log(56);
+}
+checked()
+function updateCount(item) {
+  for (let i = 0; i < products.value.length; i++) {
+    if (products.value[i].id === item.id) {
+      products.value[i].count = item.count;
+    }
+  }
+  checked()
+  localStorage.setItem("buyProducts", JSON.stringify(products.value));
 }
 
-faindProduct()
-
-function updateCount(item) {
-  for (var i = 0; i < data.value.length; i++) {
-    if (data.value[i].id === item.id) {
-      data.value[i].count = item.count;
-    }
-  }
-  localStorage.setItem("products", JSON.stringify(data.value));
-  // localStorage.setItem("counts", item.count);
+function deletProduct(id) {
+  let index = products.value.find((product) => product.id === id);
+  index.count = 0;
+  products.value.splice(index, 1);
+  localStorage.setItem("buyProducts", JSON.stringify(products.value));
 }
 </script>
 <style scoped></style>
